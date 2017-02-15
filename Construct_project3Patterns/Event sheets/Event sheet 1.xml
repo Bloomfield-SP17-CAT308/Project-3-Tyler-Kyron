@@ -3,9 +3,11 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="greenLife" sid="266191263530577" static="0" type="number">1</variable>
+        <variable constant="0" name="redLife" sid="439338090805877" static="0" type="number">1</variable>
         <event-group description="" sid="155631411574883" title="PlayerControl">
             <sub-events>
-                <event-group description="" sid="872853456043756" title="movementControls&amp;Mirror">
+                <event-group description="" sid="872853456043756" title="WASDmovementControls&amp;Mirror">
                     <sub-events>
                         <event-block sid="221424816998362">
                             <conditions>
@@ -107,6 +109,24 @@
                             <param id="0" name="Seconds">1.0</param>
                         </action>
                         <action id="-25" name="Go to layout (by name)" sid="508281739416696" type="System">
+                            <param id="0" name="Layout">&quot;GameOver&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="877442096580220">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="945271333873299" type="player">
+                            <param id="0" name="Object">enemyGreen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="128690288342796" type="player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="578572594976085" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="458898688197425" type="System">
                             <param id="0" name="Layout">&quot;GameOver&quot;</param>
                         </action>
                     </actions>
@@ -236,6 +256,26 @@
                                 <action id="-9" name="Destroy" sid="924328980055317" type="bulletRed" />
                             </actions>
                         </event-block>
+                        <event-block sid="272835311030324">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="494525415827296" type="bulletRed">
+                                    <param id="0" name="Object">redDoor</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="257340127366680" type="bulletRed" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="127886475257706">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="549648981537067" type="bulletRed">
+                                    <param id="0" name="Object">greenDoor</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="145216996451960" type="bulletRed" />
+                            </actions>
+                        </event-block>
                         <event-block sid="636142904643811">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="501916963859144" type="Keyboard">
@@ -326,6 +366,26 @@
                                 <action id="-9" name="Destroy" sid="560011790139111" type="bulletGreen" />
                             </actions>
                         </event-block>
+                        <event-block sid="144928052067573">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="152581310894456" type="bulletGreen">
+                                    <param id="0" name="Object">redDoor</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="259845702137304" type="bulletGreen" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="530699586613496">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="767917050544541" type="bulletGreen">
+                                    <param id="0" name="Object">greenDoor</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="193824571511873" type="bulletGreen" />
+                            </actions>
+                        </event-block>
                         <event-block sid="611737244788718">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="673929616380579" type="Keyboard">
@@ -392,10 +452,92 @@
         <event-group description="" sid="499941364413997" title="Animations">
             <sub-events>
                 <event-block sid="125109093270803">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="826803058388861" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="568890792718681" type="PlayerAnimation">
+                            <param id="0" name="Object">player</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="273187671542145" type="PlayerAnimation">
+                            <param id="0" name="Pin to">player</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="709497046725657">
+                    <conditions>
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="505653951416326" type="player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="297030752159002" type="PlayerAnimation">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="472692694572362">
+                    <conditions>
+                        <condition behavior="Platform" id="0" name="Is moving" sid="626130443412364" type="player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="846344890574222" type="PlayerAnimation">
+                            <param id="0" name="Animation">&quot;Walk&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="289747927248594">
+                    <conditions>
+                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="276684727396782" type="player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="536835782734999" type="PlayerAnimation">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="993524592315582">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="218109145868838" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="408970094523694" type="redAnimation">
+                            <param id="0" name="Object">enemyRed</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="128246390767055" type="redAnimation">
+                            <param id="0" name="Pin to">enemyRed</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="926191011389761">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="227942700785611" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="953489514876376" type="greenAnimation">
+                            <param id="0" name="Object">enemyGreen</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="896186493677326" type="greenAnimation">
+                            <param id="0" name="Pin to">enemyGreen</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="819907362704457">
                     <conditions />
                     <actions />
                 </event-block>
-                <event-block sid="289747927248594">
+                <event-block sid="121941081494455">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="632821029984446">
                     <conditions />
                     <actions />
                 </event-block>
@@ -412,6 +554,11 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="626956413406880" type="enemyRed" />
                         <action id="-9" name="Destroy" sid="830468012844860" type="bulletRed" />
+                        <action id="-9" name="Destroy" sid="873927388598686" type="redAnimation" />
+                        <action id="-11" name="Subtract from" sid="775483259849107" type="System">
+                            <param id="0" name="Variable">redLife</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="276722102557265">
@@ -423,6 +570,11 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="147968645524237" type="enemyGreen" />
                         <action id="-9" name="Destroy" sid="553226678520864" type="bulletGreen" />
+                        <action id="-9" name="Destroy" sid="548497569535461" type="greenAnimation" />
+                        <action id="-11" name="Subtract from" sid="646752896506031" type="System">
+                            <param id="0" name="Variable">greenLife</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="301305940538594">
@@ -446,8 +598,28 @@
                     </actions>
                 </event-block>
                 <event-block sid="153860108658934">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="773193955850775" type="System">
+                            <param id="0" name="Variable">greenLife</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="629244962062370" type="greenDoor" />
+                    </actions>
+                </event-block>
+                <event-block sid="241686705516958">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="246319537309903" type="System">
+                            <param id="0" name="Variable">redLife</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="272466887796611" type="redDoor" />
+                    </actions>
                 </event-block>
                 <event-block sid="207343765625580">
                     <conditions />
@@ -474,7 +646,7 @@
                     </conditions>
                     <actions>
                         <action id="-2" name="Go to layout" sid="816411390050363" type="System">
-                            <param id="0" name="Layout">Layout 1</param>
+                            <param id="0" name="Layout">Level1</param>
                         </action>
                         <action id="-21" name="Reset global variables" sid="352459202851726" type="System" />
                     </actions>
