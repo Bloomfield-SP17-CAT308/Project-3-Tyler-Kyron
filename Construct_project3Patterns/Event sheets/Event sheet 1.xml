@@ -1,0 +1,550 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-group description="" sid="155631411574883" title="PlayerControl">
+            <sub-events>
+                <event-group description="" sid="872853456043756" title="movementControls&amp;Mirror">
+                    <sub-events>
+                        <event-block sid="221424816998362">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="257304819818854" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="751929462820125" type="player">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="913269629598125">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="980360597314776" type="Keyboard">
+                                    <param id="0" name="Key">87 (W)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="387438837413040" type="player">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="840575458225808">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="699644701748982" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="578162870094975" type="player">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="662771681225909">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="100365808863029" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="421495036035569" type="player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="763051216476805">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="200059530038957" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="377150975675537" type="player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="716633779814856">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="403489174132769" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="791219187678202" type="player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="711543386323624">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="371789175645870" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="272000913265593" type="player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="301299604134177">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="922544474119123" type="player">
+                            <param id="0" name="Object">enemyRed</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="916444247839268" type="player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="682883520981047" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="508281739416696" type="System">
+                            <param id="0" name="Layout">&quot;GameOver&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="156080563381827">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="711659725318566" type="player">
+                            <param id="0" name="Object">redGun</param>
+                        </condition>
+                        <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="468309613696332" type="greenGun" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="957807092534559" type="redGun">
+                            <param id="0" name="Object">player</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="466174472485635" type="redGun">
+                            <param id="0" name="Pin to">player</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="831306625983226">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="841503556285138" type="Keyboard">
+                            <param id="0" name="Key">81 (Q)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="519683739613948" type="redGun" />
+                    </actions>
+                </event-block>
+                <event-block sid="428855586066600">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="254000398057193" type="player">
+                            <param id="0" name="Object">greenGun</param>
+                        </condition>
+                        <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="174423860533857" type="redGun" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="939325946097737" type="greenGun">
+                            <param id="0" name="Object">player</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="917682768352972" type="greenGun">
+                            <param id="0" name="Pin to">player</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="806995517953989">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="510363485952946" type="Keyboard">
+                            <param id="0" name="Key">81 (Q)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="734440311744432" type="greenGun" />
+                    </actions>
+                </event-block>
+                <event-block sid="650979967180228">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="271028618449840">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="282451425515908">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="215612303293675">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="618974986576005" title="Bullets&amp;Guns">
+            <sub-events>
+                <event-group description="" sid="952124425226269" title="redGun">
+                    <sub-events>
+                        <event-block sid="925932403300376">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="685516135532351" type="Keyboard">
+                                    <param id="0" name="Key">32 (Space)</param>
+                                </condition>
+                                <condition behavior="Pin" id="0" name="Is pinned" sid="918005264428617" type="redGun" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="127037904491949" type="redGun">
+                                    <param id="0" name="Object">bulletRed</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="896302120711188">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="429080788952381" type="redGun" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="385322634102643" type="bulletRed">
+                                            <param id="0" name="Angle">180</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="117758614005864">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="997043086298510" type="redGun" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="576323092229555" type="bulletRed">
+                                            <param id="0" name="Angle">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="904585034571530">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="181323399319170" type="bulletRed">
+                                    <param id="0" name="Object">walls</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="924328980055317" type="bulletRed" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="636142904643811">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="501916963859144" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                                <condition behavior="Pin" id="0" name="Is pinned" sid="983055753215268" type="redGun" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="623484243736650" type="redGun">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="827867394105363">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="749240390285275" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                                <condition behavior="Pin" id="0" name="Is pinned" sid="856317884057326" type="redGun" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="852244409188587" type="redGun">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="538265514461503">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="497205521078732" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                                <condition behavior="Pin" id="0" name="Is pinned" sid="262778995131789" type="redGun" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="127686474665047" type="redGun">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="215680197700135" title="greenGun">
+                    <sub-events>
+                        <event-block sid="498836449288315">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="218260884439300" type="Keyboard">
+                                    <param id="0" name="Key">32 (Space)</param>
+                                </condition>
+                                <condition behavior="Pin" id="0" name="Is pinned" sid="797483631000255" type="greenGun" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="265449888737870" type="greenGun">
+                                    <param id="0" name="Object">bulletGreen</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="302024860748087">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="852187311581198" type="greenGun" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-18" name="Rotate clockwise" sid="654365768140023" type="bulletGreen">
+                                            <param id="0" name="Degrees">180</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="131517048944530">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="927612126924345" type="greenGun" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-18" name="Rotate clockwise" sid="813737397710098" type="bulletGreen">
+                                            <param id="0" name="Degrees">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="692846944685155">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="336052570914945" type="bulletGreen">
+                                    <param id="0" name="Object">walls</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="560011790139111" type="bulletGreen" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="611737244788718">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="673929616380579" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                                <condition behavior="Pin" id="0" name="Is pinned" sid="844546397046858" type="greenGun" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="923881877389062" type="greenGun">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="111629484621137">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="234116291680098" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                                <condition behavior="Pin" id="0" name="Is pinned" sid="940260198343334" type="greenGun" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="812020743303754" type="greenGun">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="687436679432834">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="287056714329407" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                                <condition behavior="Pin" id="0" name="Is pinned" sid="149593439442767" type="greenGun" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="100547960309140" type="greenGun">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="978144029554391">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="106867249017165">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="121180827110335">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="762078252481040">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="803771922429573">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="499941364413997" title="Animations">
+            <sub-events>
+                <event-block sid="125109093270803">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="289747927248594">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="603378834687523" title="Enemies">
+            <sub-events>
+                <event-block sid="791053834225408">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="696698172279575" type="enemyRed">
+                            <param id="0" name="Object">bulletRed</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="626956413406880" type="enemyRed" />
+                        <action id="-9" name="Destroy" sid="830468012844860" type="bulletRed" />
+                    </actions>
+                </event-block>
+                <event-block sid="276722102557265">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="588464189453988" type="enemyGreen">
+                            <param id="0" name="Object">bulletGreen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="147968645524237" type="enemyGreen" />
+                        <action id="-9" name="Destroy" sid="553226678520864" type="bulletGreen" />
+                    </actions>
+                </event-block>
+                <event-block sid="301305940538594">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="372006666437183" type="enemyRed">
+                            <param id="0" name="Object">bulletGreen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="899687739517368" type="bulletGreen" />
+                    </actions>
+                </event-block>
+                <event-block sid="334451680938816">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="209699940548544" type="enemyGreen">
+                            <param id="0" name="Object">bulletRed</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="152960722118062" type="bulletRed" />
+                    </actions>
+                </event-block>
+                <event-block sid="153860108658934">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="207343765625580">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="692553684949477">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="937238382550629" title="Group">
+            <sub-events>
+                <event-block sid="449900005567435">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="839671144219774" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="725601267409302" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;Title&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="816411390050363" type="System">
+                            <param id="0" name="Layout">Layout 1</param>
+                        </action>
+                        <action id="-21" name="Reset global variables" sid="352459202851726" type="System" />
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="737178353995527">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="396495052326512" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="374877708596929">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="767091812776302" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Victory&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="292797047749610" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;GameOver&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="704763125475613" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="-21" name="Reset global variables" sid="531455956772120" type="System" />
+                                <action id="-2" name="Go to layout" sid="337727683337892" type="System">
+                                    <param id="0" name="Layout">Title</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="397352253880917">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="519407280493363" type="player">
+                            <param id="0" name="Object">exit</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="659533482079647" type="player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="824503476178235" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="726794970950521" type="System">
+                            <param id="0" name="Layout">&quot;Victory&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="843993122977152">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="608018587663795">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="766410649264855">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="222145196699254">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
