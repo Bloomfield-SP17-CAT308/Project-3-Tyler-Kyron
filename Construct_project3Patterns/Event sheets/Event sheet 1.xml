@@ -95,42 +95,102 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-block sid="301299604134177">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="922544474119123" type="player">
-                            <param id="0" name="Object">enemyRed</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="916444247839268" type="player">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="682883520981047" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action id="-25" name="Go to layout (by name)" sid="508281739416696" type="System">
-                            <param id="0" name="Layout">&quot;GameOver&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="877442096580220">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="945271333873299" type="player">
-                            <param id="0" name="Object">enemyGreen</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="128690288342796" type="player">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="578572594976085" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action id="-25" name="Go to layout (by name)" sid="458898688197425" type="System">
-                            <param id="0" name="Layout">&quot;GameOver&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
+                <event-group description="" sid="250423211573192" title="playerHit">
+                    <sub-events>
+                        <event-block sid="301299604134177">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="922544474119123" type="player">
+                                    <param id="0" name="Object">enemyRed</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="916444247839268" type="player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="632525605901769" type="player">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="682883520981047" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-25" name="Go to layout (by name)" sid="508281739416696" type="System">
+                                    <param id="0" name="Layout">&quot;GameOver&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="121598034875073">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="189143840206577" type="player">
+                                    <param id="0" name="Object">enemyFalseGreen</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="131987545918842" type="player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="482290221269010" type="player">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="843003532248511" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-25" name="Go to layout (by name)" sid="232319977945817" type="System">
+                                    <param id="0" name="Layout">&quot;GameOver&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="877442096580220">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="945271333873299" type="player">
+                                    <param id="0" name="Object">enemyGreen</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="128690288342796" type="player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="248901047051296" type="player">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="578572594976085" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-25" name="Go to layout (by name)" sid="458898688197425" type="System">
+                                    <param id="0" name="Layout">&quot;GameOver&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="908111624408130">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="669860019304700" type="player">
+                                    <param id="0" name="Object">enemyFalseRed</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="828223410984987" type="player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="979457007568577" type="player">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="975222481823575" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-25" name="Go to layout (by name)" sid="237261441670371" type="System">
+                                    <param id="0" name="Layout">&quot;GameOver&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-block sid="156080563381827">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="711659725318566" type="player">
@@ -529,6 +589,36 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="303413228808752">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="863556230471595" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="137525626409466" type="falseGreenAnimation">
+                            <param id="0" name="Object">enemyFalseGreen</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="922273022155174" type="falseGreenAnimation">
+                            <param id="0" name="Pin to">enemyFalseGreen</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="198142048566479">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="197216571097703" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="751667605673857" type="falseRedAnimation">
+                            <param id="0" name="Object">enemyFalseRed</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="288927221617085" type="falseRedAnimation">
+                            <param id="0" name="Pin to">enemyFalseRed</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="819907362704457">
                     <conditions />
                     <actions />
@@ -561,6 +651,22 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="904948300172601">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="231979227509519" type="enemyFalseGreen">
+                            <param id="0" name="Object">bulletRed</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="855007405891963" type="enemyFalseGreen" />
+                        <action id="-9" name="Destroy" sid="264096682254977" type="bulletRed" />
+                        <action disabled="1" id="-9" name="Destroy" sid="168172867616334" type="redAnimation" />
+                        <action id="-11" name="Subtract from" sid="927095123294413" type="System">
+                            <param id="0" name="Variable">redLife</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="276722102557265">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="588464189453988" type="enemyGreen">
@@ -577,6 +683,22 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="248147969264244">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="580181795480523" type="enemyFalseRed">
+                            <param id="0" name="Object">bulletGreen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="875165341108801" type="enemyFalseRed" />
+                        <action id="-9" name="Destroy" sid="108082893242685" type="bulletGreen" />
+                        <action disabled="1" id="-9" name="Destroy" sid="358303737953993" type="greenAnimation" />
+                        <action id="-11" name="Subtract from" sid="345866887865625" type="System">
+                            <param id="0" name="Variable">greenLife</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="301305940538594">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="372006666437183" type="enemyRed">
@@ -585,6 +707,16 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="899687739517368" type="bulletGreen" />
+                    </actions>
+                </event-block>
+                <event-block sid="852943348053513">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="104817343996320" type="enemyFalseGreen">
+                            <param id="0" name="Object">bulletGreen</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="868532092334056" type="bulletGreen" />
                     </actions>
                 </event-block>
                 <event-block sid="334451680938816">
@@ -622,8 +754,43 @@
                     </actions>
                 </event-block>
                 <event-block sid="207343765625580">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="321647705431475" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="996402800496324" type="System">
+                            <param id="0" name="Variable">greenLife</param>
+                            <param id="1" name="Value">enemyGreen.Count + enemyFalseRed.Count</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="918205725055238" type="System">
+                            <param id="0" name="Variable">redLife</param>
+                            <param id="1" name="Value">enemyRed.Count + enemyFalseGreen.Count</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="855574264213778">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="128829364853625" type="System">
+                            <param id="0" name="First value">enemyGreen.Count</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="245041112650252" type="greenDoor" />
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="996431681719871">
+                    <conditions>
+                        <condition disabled="1" id="-8" name="Compare two values" sid="525240231169989" type="System">
+                            <param id="0" name="First value">enemyRed.Count</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="936628437286349" type="redDoor" />
+                    </actions>
                 </event-block>
                 <event-block sid="692553684949477">
                     <conditions />
@@ -695,8 +862,26 @@
                         <action id="-16" name="Wait" sid="824503476178235" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="-25" name="Go to layout (by name)" sid="726794970950521" type="System">
-                            <param id="0" name="Layout">&quot;Victory&quot;</param>
+                        <action id="-43" name="Go to next/previous layout" sid="726794970950521" type="System">
+                            <param id="0" name="Which">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="823011940323265">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="878778640327672" type="player">
+                            <param id="0" name="Object">finalExit</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="194758687473583" type="player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="638769914806405" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="655846893512350" type="System">
+                            <param id="0" name="Layout">Victory</param>
                         </action>
                     </actions>
                 </event-block>
