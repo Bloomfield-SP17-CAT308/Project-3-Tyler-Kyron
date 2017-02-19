@@ -7,4 +7,7 @@
 \pard\pardeftab720\partightenfactor0
 
 \f0\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
-find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch}
+find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch\
+.DS_Store\
+git add .gitignore\
+git commit -m '.DS_Store banished!'}
