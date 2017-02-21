@@ -80,7 +80,16 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="120763649477396" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Project-3-Tyler-Kyron\Art\Player\Puzzle game player.png">
+                        <collision-poly>
+                            <point x="0.390625" y="0.390625" />
+                            <point x="0.5" y="0" />
+                            <point x="0.59375" y="0.40625" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.5" y="0.984375" />
+                            <point x="0.359375" y="0.640625" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -102,7 +111,18 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="821088402375842" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.538462" original-source="G:\Project-3-Tyler-Kyron\Art\EnemySprites\redEnemy-.png">
+                        <collision-poly>
+                            <point x="0.15625" y="0.282051" />
+                            <point x="0.46875" y="0.025641" />
+                            <point x="0.6875" y="0.358974" />
+                            <point x="0.65625" y="0.538462" />
+                            <point x="0.96875" y="0.948718" />
+                            <point x="0.46875" y="0.846154" />
+                            <point x="0.25" y="0.717949" />
+                            <point x="0.15625" y="0.538462" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -136,7 +156,14 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="200923852937368" speed="5">
-                    <frame duration="1" hotspotX="0.506383" hotspotY="0.420561" />
+                    <frame duration="1" hotspotX="0.469388" hotspotY="0.444444" original-source="G:\Project-3-Tyler-Kyron\Art\Player\Red Gun.png">
+                        <collision-poly>
+                            <point x="0.183673" y="0.138889" />
+                            <point x="1" y="0.166667" />
+                            <point x="0.571429" y="0.666667" />
+                            <point x="0.142857" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -161,16 +188,16 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="515548816848122" speed="5">
-                    <frame duration="1" hotspotX="0.502128" hotspotY="0.504673" original-source="F:\GameGroupII\project3Patterns\Animations\redGun\Default\000.png">
+                    <frame duration="1" hotspotX="0.428571" hotspotY="0.472222" original-source="G:\Project-3-Tyler-Kyron\Art\Player\Green Gun.png">
                         <collision-poly>
-                            <point x="0.0255319" y="0.0560748" />
-                            <point x="0.497872" y="0.00934579" />
-                            <point x="0.995745" y="0.00934579" />
-                            <point x="0.731915" y="0.495327" />
-                            <point x="0.731915" y="0.411215" />
-                            <point x="0.497872" y="0.383178" />
-                            <point x="0.0425532" y="0.906542" />
-                            <point x="0.0893617" y="0.495327" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.972222" />
+                            <point x="1" y="0.972222" />
+                            <point x="1" y="0.972222" />
+                            <point x="0" y="0.972222" />
+                            <point x="0.0497612" y="0.972222" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -198,7 +225,18 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="162965900608028" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.538462" original-source="G:\Project-3-Tyler-Kyron\Art\EnemySprites\GreenEnemy.png">
+                        <collision-poly>
+                            <point x="0.15625" y="0.282051" />
+                            <point x="0.46875" y="0.025641" />
+                            <point x="0.6875" y="0.358974" />
+                            <point x="0.65625" y="0.538462" />
+                            <point x="0.96875" y="0.948718" />
+                            <point x="0.46875" y="0.846154" />
+                            <point x="0.25" y="0.717949" />
+                            <point x="0.15625" y="0.538462" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -291,7 +329,18 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="683208767770111" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.538462" original-source="G:\Project-3-Tyler-Kyron\Art\EnemySprites\falseGreenEnemy.png">
+                        <collision-poly>
+                            <point x="0.15625" y="0.282051" />
+                            <point x="0.46875" y="0.025641" />
+                            <point x="0.6875" y="0.358974" />
+                            <point x="0.65625" y="0.538462" />
+                            <point x="0.96875" y="0.948718" />
+                            <point x="0.46875" y="0.846154" />
+                            <point x="0.25" y="0.717949" />
+                            <point x="0.15625" y="0.538462" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -304,7 +353,18 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="874054534447301" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.538462" original-source="G:\Project-3-Tyler-Kyron\Art\EnemySprites\falseRedEnemy.png">
+                        <collision-poly>
+                            <point x="0.15625" y="0.282051" />
+                            <point x="0.46875" y="0.025641" />
+                            <point x="0.6875" y="0.358974" />
+                            <point x="0.65625" y="0.538462" />
+                            <point x="0.96875" y="0.948718" />
+                            <point x="0.46875" y="0.846154" />
+                            <point x="0.25" y="0.717949" />
+                            <point x="0.15625" y="0.538462" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
