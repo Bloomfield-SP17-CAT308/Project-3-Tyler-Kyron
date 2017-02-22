@@ -375,6 +375,37 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="925058297097998">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="127903230426232" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                                <condition behavior="Pin" id="0" name="Is pinned" sid="398104686548655" type="redGun" />
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="289643977088341">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="777192427891245" type="player" />
+                                <condition behavior="Pin" id="0" name="Is pinned" sid="367199540059549" type="redGun" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="286599387594930" type="redGun">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="584856703405129">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="924655569910856" type="player" />
+                                <condition behavior="Pin" id="0" name="Is pinned" sid="386420704265158" type="redGun" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="411227601868058" type="redGun">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="215680197700135" title="greenGun">
@@ -485,13 +516,44 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="882225565494344">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="258708520191123" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                                <condition behavior="Pin" id="0" name="Is pinned" sid="598786078237513" type="greenGun" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="931150680067502" type="greenGun">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="106867249017165">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="985172614844425" type="player" />
+                                <condition behavior="Pin" id="0" name="Is pinned" sid="167135700923811" type="greenGun" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="809119440837370" type="greenGun">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="137249018178801">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="684098215252447" type="player" />
+                                <condition behavior="Pin" id="0" name="Is pinned" sid="812580724005750" type="greenGun" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="924159309190736" type="greenGun">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-block sid="978144029554391">
-                    <conditions />
-                    <actions />
-                </event-block>
-                <event-block sid="106867249017165">
                     <conditions />
                     <actions />
                 </event-block>
@@ -511,7 +573,7 @@
         </event-group>
         <event-group description="" sid="499941364413997" title="Animations">
             <sub-events>
-                <event-block sid="125109093270803">
+                <event-block disabled="1" sid="125109093270803">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="826803058388861" type="System" />
                     </conditions>
@@ -559,7 +621,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="993524592315582">
+                <event-block disabled="1" sid="993524592315582">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="218109145868838" type="System" />
                     </conditions>
@@ -574,7 +636,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="926191011389761">
+                <event-block disabled="1" sid="926191011389761">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="227942700785611" type="System" />
                     </conditions>
@@ -589,7 +651,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="303413228808752">
+                <event-block disabled="1" sid="303413228808752">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="863556230471595" type="System" />
                     </conditions>
@@ -604,7 +666,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="198142048566479">
+                <event-block disabled="1" sid="198142048566479">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="197216571097703" type="System" />
                     </conditions>
@@ -886,20 +948,84 @@
                     </actions>
                 </event-block>
                 <event-block sid="843993122977152">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="314568795022609" type="player">
+                            <param id="0" name="Object">Trigger_1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="118224566209596" type="Tutor_1">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="763669479634639" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="690031775982289" type="Tutor_1">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="672215395935008">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="871272142632781" type="player">
+                            <param id="0" name="Object">Trigger_2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="644808188386800" type="Tutor_2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="829804961611629" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="835653969693135" type="Tutor_2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="568625812807999">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="936653476684951" type="player">
+                            <param id="0" name="Object">Trigger_3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="946471771400598" type="Tutor_3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="980196757410680" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="334886302502414" type="Tutor_3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="608018587663795">
-                    <conditions />
-                    <actions />
-                </event-block>
-                <event-block sid="766410649264855">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="275813616859583" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="588576518120757" type="Tutor_1">
+                            <param id="0" name="Text">&quot;Press the Arrow Keys or WASD to move&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="597063044483682" type="Tutor_2">
+                            <param id="0" name="Text">&quot;Press Space to Shoot&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="541056003203425" type="Tutor_3">
+                            <param id="0" name="Text">&quot;Press Q to drop weapon&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="222145196699254">
-                    <conditions />
-                    <actions />
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="667788007305692" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="860311319927155" type="Text">
+                            <param id="0" name="Text">&quot;Red Enemies: &quot; &amp; redLife &amp; &quot;   &quot; &amp; &quot;Green Enemies: &quot; &amp; greenLife &amp; &quot;   &quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
