@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>RG Monster Shooter</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author>Tyler Michaud and Kyron Garnett</author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>23900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Title</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Keyboard" sid="139514686461989">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Mouse" sid="291565704746072">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Audio" sid="361858227098809">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Text" sid="691603074747031">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text2" sid="136958018981043">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="player" sid="447439366195523">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="121263389508202">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="619039020367700">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="486866577643599">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="120763649477396" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="G:\Project-3-Tyler-Kyron\Art\Player\Puzzle game player.png">
+                        <collision-poly>
+                            <point x="0.390625" y="0.390625" />
+                            <point x="0.5" y="0" />
+                            <point x="0.59375" y="0.40625" />
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.5" y="0.984375" />
+                            <point x="0.359375" y="0.640625" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="walls" sid="931694884411640">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="442497589637977">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="enemyRed" sid="939195786794683">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="732997268759700">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="821088402375842" speed="5">
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.538462" original-source="G:\Project-3-Tyler-Kyron\Art\EnemySprites\redEnemy-.png">
+                        <collision-poly>
+                            <point x="0.15625" y="0.282051" />
+                            <point x="0.46875" y="0.025641" />
+                            <point x="0.6875" y="0.358974" />
+                            <point x="0.65625" y="0.538462" />
+                            <point x="0.96875" y="0.948718" />
+                            <point x="0.46875" y="0.846154" />
+                            <point x="0.25" y="0.717949" />
+                            <point x="0.15625" y="0.538462" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bulletRed" sid="578751422671251">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="637873682520933">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="499256285259395" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="exit" sid="984810912992332">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="536734234962059" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="redGun" sid="852185897504008">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="152517597350229">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="200923852937368" speed="5">
+                    <frame duration="1" hotspotX="0.469388" hotspotY="0.444444" original-source="G:\Project-3-Tyler-Kyron\Art\Player\Red Gun.png">
+                        <collision-poly>
+                            <point x="0.183673" y="0.138889" />
+                            <point x="1" y="0.166667" />
+                            <point x="0.571429" y="0.666667" />
+                            <point x="0.142857" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="elevator" sid="707563218087622">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="983776675808613">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="162870149813083">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="greenGun" sid="339923386289596">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="523411544752288">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="515548816848122" speed="5">
+                    <frame duration="1" hotspotX="0.428571" hotspotY="0.472222" original-source="G:\Project-3-Tyler-Kyron\Art\Player\Green Gun.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.972222" />
+                            <point x="1" y="0.972222" />
+                            <point x="1" y="0.972222" />
+                            <point x="0" y="0.972222" />
+                            <point x="0.0497612" y="0.972222" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bulletGreen" sid="207825592046413">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="428593857362114">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="500352066377476" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="enemyGreen" sid="553780769795747">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="495932271369748">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="162965900608028" speed="5">
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.538462" original-source="G:\Project-3-Tyler-Kyron\Art\EnemySprites\GreenEnemy.png">
+                        <collision-poly>
+                            <point x="0.15625" y="0.282051" />
+                            <point x="0.46875" y="0.025641" />
+                            <point x="0.6875" y="0.358974" />
+                            <point x="0.65625" y="0.538462" />
+                            <point x="0.96875" y="0.948718" />
+                            <point x="0.46875" y="0.846154" />
+                            <point x="0.25" y="0.717949" />
+                            <point x="0.15625" y="0.538462" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="redDoor" sid="860967316132048">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="546634895644893">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="greenDoor" sid="109054062071134">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="171891626349132">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="PlayerAnimation" sid="672711810856762">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="247162344121953">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="263251520670692" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="2" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="333820707048518" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="2" loop="0" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="102608306064757" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="2" loop="0" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="999087945974282" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="redAnimation" sid="199413350685269">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="683897939379544">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="891880405592359" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="greenAnimation" sid="112688536785712">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="397504977164354">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="728989740887214" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="finalExit" sid="819241182072909">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="921176055150556" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="enemyFalseGreen" sid="968078536731121">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="279809393578818">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="683208767770111" speed="5">
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.538462" original-source="G:\Project-3-Tyler-Kyron\Art\EnemySprites\falseGreenEnemy.png">
+                        <collision-poly>
+                            <point x="0.15625" y="0.282051" />
+                            <point x="0.46875" y="0.025641" />
+                            <point x="0.6875" y="0.358974" />
+                            <point x="0.65625" y="0.538462" />
+                            <point x="0.96875" y="0.948718" />
+                            <point x="0.46875" y="0.846154" />
+                            <point x="0.25" y="0.717949" />
+                            <point x="0.15625" y="0.538462" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="enemyFalseRed" sid="724342104791055">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="411693440123700">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="874054534447301" speed="5">
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.538462" original-source="G:\Project-3-Tyler-Kyron\Art\EnemySprites\falseRedEnemy.png">
+                        <collision-poly>
+                            <point x="0.15625" y="0.282051" />
+                            <point x="0.46875" y="0.025641" />
+                            <point x="0.6875" y="0.358974" />
+                            <point x="0.65625" y="0.538462" />
+                            <point x="0.96875" y="0.948718" />
+                            <point x="0.46875" y="0.846154" />
+                            <point x="0.25" y="0.717949" />
+                            <point x="0.15625" y="0.538462" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="falseRedAnimation" sid="471122710841550">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="952132262387445">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="238586318219135" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="falseGreenAnimation" sid="394360943202964">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="129535181749707">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="757238465066202" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Trigger_1" sid="382731377602705">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="263685317626693" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Trigger_2" sid="533296041030355">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="456204640306220" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Trigger_3" sid="214965058244393">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="244081614815844" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tutor_1" sid="455968516320184">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Tutor_2" sid="815894850396135">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Tutor_3" sid="430764039590280">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Title.xml</layout>
+        <layout>Level1.xml</layout>
+        <layout>Level2.xml</layout>
+        <layout>Level3.xml</layout>
+        <layout>Victory.xml</layout>
+        <layout>GameOver.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="0" />
+        <global-instance type="Mouse" uid="1" />
+        <global-instance type="Audio" uid="2">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
